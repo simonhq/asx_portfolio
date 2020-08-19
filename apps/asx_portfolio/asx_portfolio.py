@@ -128,7 +128,7 @@ class Get_ASX_portfolio_info(hass.Hass):
             c_date = jtags['data'][0]['close_date']
 
             #get the share name and their values
-            sym += ", " + jtags['data'][0]['code'] + ":" + jtags['data'][0]['close_price']
+            sym += ", " + jtags['data'][0]['code'] + ":" + str(jtags['data'][0]['close_price'])
             
             #if we need to store the individual value of each stock - not used
             #p_price.append(float(symcod[1]) * float(jtags['data'][0]['close_price']))
