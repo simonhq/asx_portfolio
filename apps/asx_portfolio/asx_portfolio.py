@@ -128,7 +128,7 @@ class Get_ASX_portfolio_info(hass.Hass):
             c_date = jtags['data'][0]['close_date']
 
             #get the share name and their values
-            sym += ", " + jtags['data'][0]['code'] + ":" + str(jtags['data'][0]['close_price'])
+            sym += jtags['data'][0]['code'] + ":" + str(jtags['data'][0]['close_price']) + "\n"
             
             #if we need to store the individual value of each stock - not used
             #p_price.append(float(symcod[1]) * float(jtags['data'][0]['close_price']))
@@ -148,8 +148,10 @@ class Get_ASX_portfolio_info(hass.Hass):
         else:
             icon_mdi = self.tick_mdi
 
+        t_price_str = "{:.2f}".format(t_price) 
+
         #create the sensor
-        self.set_state(self.asx_portfolio + self.PORT_NAME, state=str(t_price), replace=True, attributes= {"icon": icon_mdi, "friendly_name": self.PORT_NAME + " Portfolio", "close_date": str(c_date), "stock_values": str(sym), "total_change": str(cht_price) })
+        self.set_state(self.asx_portfolio + self.PORT_NAME, state=str(t_price_str), replace=True, attributes= {"icon": icon_mdi, "friendly_name": self.PORT_NAME + " Portfolio", "close_date": str(c_date), "stock_values": str(sym), "total_change": str(cht_price) })
 
             
         
