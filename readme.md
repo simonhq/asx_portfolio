@@ -7,9 +7,9 @@ _Creates a sensor for Home Assistant for your ASX share portfolio_
 
 ## Lovelace Examples
 
-![Example of the entities in Lovelace](https://github.com/simonhq/asx_sensor/blob/master/asx_portfolio_entities.PNG)
+![Example of the entities in Lovelace](https://github.com/simonhq/asx_portfolio/blob/master/asx_portfolio_entities.PNG)
 
-![An Entity has the share information](https://github.com/simonhq/asx_sensor/blob/master/asx_portfolio_entity.PNG)
+![An Entity has the share information](https://github.com/simonhq/asx_portfolio/blob/master/asx_portfolio_entity.PNG)
 
 ## Installation
 
